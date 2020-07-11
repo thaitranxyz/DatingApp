@@ -10,6 +10,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { NgxGalleryModule } from 'ngx-gallery-9';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'; 
+import { TimeagoModule } from 'ngx-timeago';
 
 
 import { AppComponent } from "./app.component";
@@ -67,6 +68,7 @@ export function tokenGetter() {
       RouterModule.forRoot(AppRoutes),
       NgxGalleryModule,
       FileUploadModule,
+      TimeagoModule.forRoot(),
       JwtModule.forRoot({
          config: {
             tokenGetter: tokenGetter,
